@@ -129,6 +129,15 @@ ware_housa =  JSON.parse(sessionStorage.getItem("ware_housa"));
 common_addressa =  JSON.parse(sessionStorage.getItem("common_addressa"));
 
 
+sh_regionarray =  JSON.parse(sessionStorage.getItem("sh_regionarray"));
+
+ //alert(sh_regionarray);
+
+if(sh_regionarray == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
 
 var qualification_id = user_obja.type;
 //alert(qualification_id+'qualification_id');

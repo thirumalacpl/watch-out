@@ -101,7 +101,15 @@ verification_master_array =  JSON.parse(sessionStorage.getItem("verification_mas
 
 
 //alert(sh_employment_records_array);
+sh_regionarray =  JSON.parse(sessionStorage.getItem("sh_regionarray"));
 
+ //alert(sh_regionarray);
+
+if(sh_regionarray == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
 
 var superempty=sh_new_veri_list;
 

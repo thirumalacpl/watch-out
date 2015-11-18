@@ -81,6 +81,12 @@ if(inpro_veri == ""){
   $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false });
 }
 
+if(inpro_veri == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
+
 //alert('if inside');
 for(a=0;a<inprogressArray_array.length;a++){
   inpro_obj = inprogressArray_array[a];

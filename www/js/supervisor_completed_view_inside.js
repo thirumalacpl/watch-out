@@ -13,6 +13,8 @@ $('.iGallery').imageflip()
 $('.s22').empty();
 $('#sda_newvericom').empty();
 $('#lii_newvericom').empty();
+$('.proof').show();
+
 $('.document_imag_inproone_veria_c').empty();
 $('.document_imag_inproone_verib_c').empty();
 $('.document_imag_inproone_veric_c').empty();
@@ -109,6 +111,16 @@ web_veria =  JSON.parse(sessionStorage.getItem("web_veria"));
 supplier_venda =  JSON.parse(sessionStorage.getItem("supplier_venda"));
 ware_housa =  JSON.parse(sessionStorage.getItem("ware_housa"));
 common_addressa =  JSON.parse(sessionStorage.getItem("common_addressa"));
+
+regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
+
+//alert(regionArray_array);
+
+if(regionArray_array == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
 
 var qualification_id = user_obja.type;
 //alert(qualification_id+'qqqqqqqqqq');

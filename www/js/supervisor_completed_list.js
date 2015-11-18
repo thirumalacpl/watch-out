@@ -70,6 +70,19 @@ warehouse_verification_array =  JSON.parse(sessionStorage.getItem("warehouse_ver
 verification_master_array =  JSON.parse(sessionStorage.getItem("verification_master_array"));
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
+
+regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
+
+//alert(regionArray_array);
+
+if(regionArray_array == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
+
+
+
 username=regionArray_array.username;
 //alert(username);
 $("#userlistinvnc").text(username);
@@ -81,6 +94,11 @@ var superempty=sup_verified_array;
 if(superempty == ""){
   alert('No record Found');
   $.mobile.changePage($('#dashboard'), { transition: "none", changeHash: true, reverse: false });
+}
+if(superempty == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
 }
 
 for(a=0;a<sup_verified_array.length;a++){

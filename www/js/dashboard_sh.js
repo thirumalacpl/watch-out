@@ -18,6 +18,7 @@
 
 //alert(sh_regionarray);
 
+
 if(sh_regionarray == null){
 //alert('ppp');
  $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });

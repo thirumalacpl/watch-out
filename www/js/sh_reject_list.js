@@ -63,6 +63,15 @@ bankguarantee_verification_array =  JSON.parse(sessionStorage.getItem("bankguara
 address_verification_array =  JSON.parse(sessionStorage.getItem("address_verification_array"));
 reference_verification_array =  JSON.parse(sessionStorage.getItem("reference_verification_array"));
 
+sh_regionarray =  JSON.parse(sessionStorage.getItem("sh_regionarray"));
+
+ //alert(sh_regionarray);
+
+if(sh_regionarray == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
 
 var superempty=completed_sh;
 

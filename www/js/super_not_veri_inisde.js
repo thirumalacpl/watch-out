@@ -7,6 +7,8 @@ $(document).on('pageshow', '#pagedesign_not_veri', function(){
 $('.ssd').empty();
 $('#sda_newverinot').empty();
 $('#lii_newverinot').empty();
+$('.proof').show();
+
 $('.document_imag_inproone_notveria').empty();
 $('.document_imag_inproone_notverib').empty()
 $('.document_imag_inproone_notveric').empty()
@@ -112,6 +114,16 @@ ware_housa =  JSON.parse(sessionStorage.getItem("ware_housa"));
 common_addressa =  JSON.parse(sessionStorage.getItem("common_addressa"));
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
+
+
+//alert(regionArray_array);
+
+if(regionArray_array == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
+
 username=regionArray_array.username;
 //alert(username);
 $("#userlistinverinot").text(username);

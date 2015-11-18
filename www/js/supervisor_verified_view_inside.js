@@ -27,11 +27,7 @@ $.mobile.changePage($('#supervisor_list_view'), { transition: "none", changeHash
 return false;
 });
 
-/*$(document).off('click', '#verifiedinv').on('click', '#verifiedinv', function() {
 
-$.mobile.changePage($('#supervisor_verified_list'), { transition: "none", changeHash: true, reverse: false });
-return false;
-});*/
 
 $(document).off('click', '#verifiedinvv').on('click', '#verifiedinvv', function() {
 
@@ -109,32 +105,17 @@ $(document).off('click', '#siha_p').on('click', '#siha_p', function() {
   return false;
 });
 
-//alert("success");
-$('.document_imag_veri').empty();
-$('#percent_veri').empty();
-//$('#name').empty();
+
 assignValues();
 
 superArray_array =  JSON.parse(sessionStorage.getItem("supervisor_view_new_veri_array"));
 
 supervisor_view_verified_array =  JSON.parse(sessionStorage.getItem("supervisor_verified_array"));
-for(a=0;a<supervisor_view_verified_array.length;a++){
-  super_obja = supervisor_view_verified_array[a];
+
+regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
 
 
-  city=super_obja.city_name;
-  state=super_obja.state;
-//alert(city+''+state);
-}
-/*for(a=0;a<superArray_array.length;a++){
-  super_obja = superArray_array[a];
 
-  $("#supervisor_name_verilista").text(super_obja.First_Name);
-  $("#city_name_verilista").text(super_obja.city_name);
-
-}*/
-
-//$(".ioo").append('<ul class="iGallery"><li><a href="images/complete-i.png"><img src="images/complete-i.png" style="height: 50px;"/></a></li></ul>');
 
 
 function assignValues(){
@@ -171,6 +152,15 @@ common_addressa =  JSON.parse(sessionStorage.getItem("common_addressa"));
 
 
 regionArray_array =  JSON.parse(sessionStorage.getItem("regionArray"));
+
+//alert(regionArray_array);
+
+if(regionArray_array == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
+
 username=regionArray_array.username;
 //alert(username);
 $("#userlistinveri").text(username);

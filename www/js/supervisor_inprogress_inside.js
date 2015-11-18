@@ -121,6 +121,12 @@ common_addressa =  JSON.parse(sessionStorage.getItem("common_addressa"));
 
 employment_upload_array = JSON.parse(sessionStorage.getItem("multiple_documents_array"));
 
+if(region_array == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
+
 var coordinator_id = user_obja.qualification_id;
  //alert(coordinator_id+'qualification_idcoordinator_id');
 // var proof_type_id =currentobja_addressid.proof_type_id;

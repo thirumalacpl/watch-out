@@ -101,6 +101,16 @@ alert(bankguarantee_verification_array+'bankguarantee_verification_array');
 alert(address_verification_array+'address_verification_array');
 alert(reference_verification_array+'reference_verification_array');*/
 
+sh_regionarray =  JSON.parse(sessionStorage.getItem("sh_regionarray"));
+
+ //alert(sh_regionarray);
+
+if(sh_regionarray == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
+
 var superempty=Inprogress_sh;
 
 if(superempty == ""){

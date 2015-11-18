@@ -94,6 +94,15 @@ assest_inpro =  JSON.parse(sessionStorage.getItem("assest_inpro"));
 address_veriia =  JSON.parse(sessionStorage.getItem("address_veriia"));
 referencea =  JSON.parse(sessionStorage.getItem("referencea"));
 
+sh_regionarray =  JSON.parse(sessionStorage.getItem("sh_regionarray"));
+
+ //alert(sh_regionarray);
+
+if(sh_regionarray == null){
+//alert('ppp');
+ $.mobile.changePage($('#pageone'), { transition: "none", changeHash: true, reverse: false });
+  return false;
+}
 
 var qualification_id = user_obja.edutype;
 //alert(qualification_id);
